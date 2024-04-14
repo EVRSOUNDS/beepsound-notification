@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beep Sound</title>
+</head>
+<body>
+    <audio id="beepSound" src="beep-02.mp3"></audio> <!-- Link to your specific beep sound file -->
+    <script>
+        window.addEventListener('message', function(event) {
+            // Check the message for security
+            if (event.data === 'playBeep') {
+                document.getElementById('beepSound').play();
+            }
+        });
+    </script>
+</body>
+</html>
